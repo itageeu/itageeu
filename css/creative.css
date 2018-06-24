@@ -105,7 +105,7 @@ img::-moz-selection {
   font-size: .9rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #212529;
+  color:  #f2f3f5;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
