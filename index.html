@@ -253,6 +253,41 @@
               <a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a>
             </p>
           </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <i class="fa fa-envelope-o fa-newspaper-o 8 fa-3x mb-3">   </i>
+                <h1> Contact Table</h1>
+                <p>
+                   <table class="table">
+                     <tr>
+                       <th>Name</th>
+                       <td><input name="Name" type="text" class="form-control"/></td>
+                     </tr>
+                     <tr>
+                       <th>Company</th>
+                       <td><input name="Company" type="text"  class="form-control"/></td>
+                     </tr>
+                     <tr>
+                       <th> Phone </th>
+                       <td> <input name="Phone" type="text"  class="form-control"/> </td>
+                     </tr>
+                     <tr>
+                       <th> E-Mail </th>
+                       <td> <input name="Phone" type="email"  class="form-control"/> </td>
+                     </tr>
+                     <tr>
+                       <th>Message</th>
+                       <td><textarea name="Message" cols="40" rows="5"  class="form-control"></textarea></td>
+                     </tr>
+                     <tr>
+                      <button input type="button" class="form-control" class="btn btn-success text-center">Submit</button>
+                      </td>
+                     </tr>
+                   </table>
+                </p>
+              </div>
         </div>
       </div>
     </section>
@@ -269,6 +304,19 @@
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB7yP30wlruH6vg4_wj5Kirnoai6nVP2u0",
+        authDomain: "itagecomp.firebaseapp.com",
+        databaseURL: "https://itagecomp.firebaseio.com",
+        projectId: "itagecomp",
+        storageBucket: "itagecomp.appspot.com",
+        messagingSenderId: "30361990828"
+      };
+      firebase.initializeApp(config);
+    </script>
   </body>
 
 </html>
