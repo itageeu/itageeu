@@ -282,7 +282,8 @@
                        <td><textarea name="Message" cols="40" rows="5"  class="form-control"></textarea></td>
                      </tr>
                      <tr>
-                       <td><input type="button" class="form-control" class="btn btn-success text-center" >Submit</button></td>
+                      <button input type="button" class="form-control" class="btn btn-success text-center">Submit</button>
+                      </td>
                      </tr>
                    </table>
                 </p>
@@ -303,6 +304,19 @@
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB7yP30wlruH6vg4_wj5Kirnoai6nVP2u0",
+        authDomain: "itagecomp.firebaseapp.com",
+        databaseURL: "https://itagecomp.firebaseio.com",
+        projectId: "itagecomp",
+        storageBucket: "itagecomp.appspot.com",
+        messagingSenderId: "30361990828"
+      };
+      firebase.initializeApp(config);
+    </script>
   </body>
 
 </html>
