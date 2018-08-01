@@ -123,6 +123,7 @@ img::-moz-selection {
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {
   background-color: transparent;
+  opacity: 0.5;
 }
 
 @media (min-width: 992px) {
@@ -134,7 +135,7 @@ img::-moz-selection {
     color: rgba(255, 255, 255, 0.7);
   }
   #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-    color: #fff;
+    color: rgb(216, 32, 32);
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link {
     padding: 0.5rem 1rem;
