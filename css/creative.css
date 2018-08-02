@@ -117,13 +117,11 @@ img::-moz-selection {
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
   color: #F05F40 !important;
   background-color: transparent;
-  opacity: 0.5;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {
   background-color: transparent;
-  opacity: 0.5;
 }
 
 @media (min-width: 992px) {
@@ -135,7 +133,7 @@ img::-moz-selection {
     color: rgba(255, 255, 255, 0.7);
   }
   #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-    color: rgb(216, 32, 32);
+    color: #fff;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link {
     padding: 0.5rem 1rem;
@@ -146,7 +144,7 @@ img::-moz-selection {
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-    color: rgba(134, 10, 10, 0.856);
+    color: #fff;
   }
   #mainNav.navbar-shrink {
     border-bottom: 1px solid rgba(33, 37, 41, 0.1);
