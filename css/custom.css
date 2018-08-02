@@ -1,0 +1,8 @@
+
+@media (min-width: 992px) {
+.contact {
+    background-image: url('../img/contactus.jpeg');
+    height: 222px;
+    width: 743px;
+}
+}
