@@ -127,7 +127,7 @@ function msgInfo(title, msg) {
     $("#modalMessage").text(msg);
     $("#modalBtnClose2").addClass("hide");
     $("#modalAlert div.modal-body").removeClass('bg-warning');
-    $("#modalAlert div.modal-body").addClass('bg-success');
+    // $("#modalAlert div.modal-body").addClass('bg-success');
     $("#modalAlert div.modal-header").removeClass("text-danger");
     $("#modalAlert div.modal-header").addClass("text-success");
     $("#modalmessage").removeClass("text-danger");
