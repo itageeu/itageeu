@@ -35,7 +35,7 @@ function kaydetVeritabani(tablo, id, veri) {
 function generateID(text) {
     var d = new Date();
     var n = GetTimeStamp(d);
-    text = text.replace(/[^\x00-\x7F]/g, "").split(' ').join('') + n;
+    text = ""+n+""+text.replace(/[^\x00-\x7F]/g, "").split(' ').join('') ;
     text = text.replace(/[{()}]/g, '');
     text = text.replace(/[\[\]']+/g, '');
     text = text.replace(/\(|\)/g, '')
@@ -69,7 +69,7 @@ function saveContactInfo() {
         if (mm < 10) {
             mm = '0' + mm;
         }
-        var tarih = dd + "/" + mm + "/" + d.getFullYear() + " "+d.getHours()+":";//+d.getMinutes()+":"+d.getMilliseconds();
+        var tarih = dd + "/" + mm + "/" + d.getFullYear() + " "+d.getHours()+":"+d.getMinutes()+":"+d.getMilliseconds()+"";
 
         var veri = {
             "Name": txtName,
