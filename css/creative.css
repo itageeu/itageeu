@@ -43,7 +43,11 @@ h6 {
 }
 
 .bg-dark {
-  background-color: #212529 !important;
+  /* background-color: #212529 !important; */
+  background-color: #4b4d4e;
+}
+.bg-light{
+  background-color: #fff !important;
 }
 
 .text-faded {
