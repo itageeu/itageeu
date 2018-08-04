@@ -69,7 +69,7 @@ function saveContactInfo() {
         if (mm < 10) {
             mm = '0' + mm;
         }
-        var tarih = dd + "/" + mm + "/" + d.getFullYear();
+        var tarih = dd + "/" + mm + "/" + d.getFullYear() + " "+d.getHours+":"+d.getMinutes+":"+d.getMilliseconds;
 
         var veri = {
             "Name": txtName,
