@@ -62,6 +62,7 @@ function saveContactInfo(){
         var id = generateID(txtName);
 
         kaydetVeritabani("kontakte",id,veri);
+        
 
     }
 

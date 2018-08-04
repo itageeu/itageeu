@@ -504,7 +504,7 @@
                        <td><textarea name="Message" id="txtMessage" cols="40" rows="5"  class="form-control"></textarea></td>
                      </tr>
                      <tr>
-                      <td><button input type="button" class="form-control btn btn-success text-center">Submit</button>
+                      <td><button input type="button" onclick="saveContactInfo();return false;" class="form-control btn btn-success text-center">Submit</button>
                       </td>
                      </tr>
                    </table>
@@ -532,7 +532,7 @@
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-    
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -544,6 +544,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
+    <script src="js/main.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <script>
