@@ -31,7 +31,71 @@ function GetTimeStamp(dt)
 
 function saveContactInfo(){
 
+    if(validateFields()){
+
+        var txtName = $("#txtName").val();
+        var txtCompany = $("#txtCompany").val();
+        var txtPhone = $("#txtPhone").val();
+        var txtEmail = $("#txtEmail").val();
+        var txtMessage = $("#txtMessage").val();
+
+        var d = new Date();
+        var dd=d.getDate();
+        var mm=(d.getMonth()+1);
+        if(dd<10){
+            dd='0'+dd;
+        } 
+        if(mm<10){
+            mm='0'+mm;
+        }
+        var tarih=dd+"/"+mm+"/"+d.getFullYear();
+
+        var veri={
+            "Name":txtName,
+            "Company":txtCompany,
+            "Phone":txtPhone,
+            "Email":txtEmail,
+            "Message":txtMessage,
+            "Date":tarih
+        }
+
+        var id = generateID(txtName);
+
+        kaydetVeritabani("kontakte",id,veri);
+
+    }
+
     
+}
+
+function validateFields() {
+    var statusreq = validateRequiredFields();
+    var statusnum = validateRequiredFields();
+
+    return statusreq && statusnum;
+}
+
+function validateRequiredFields() {
+    var allright = true;
+    $(".required").each(function (r) {
+        if (this.value === "") {
+            $("#" + this.id).addClass("invalid");
+            allright = false;
+        } else {
+            $("#" + this.id).removeClass("invalid");
+        }
+    });
+
+    $(".requireddrp").each(function (r) {
+        if (this.value === "0") {
+            $("#" + this.id).addClass("invalid");
+            allright = false;
+        } else {
+            $("#" + this.id).removeClass("invalid");
+        }
+    });
+
+    return allright;
 }
 
 function msgInfo(title, msg) {
