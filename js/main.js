@@ -1,12 +1,22 @@
+firebase.auth().signInAnonymously().catch(function (error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ...
+});
 
 
 function kaydetVeritabani(tablo, id, veri) {
+
+
+
+
     firebase.database().ref(tablo + '/' + id).set(veri).then(function (deneme) {
         msgInfo("Başarılı", "Kayıt tamamlandı. İşleminize devam edebilirsiniz..");
     }).catch(function (error) {
         msgInfo("Uyarı", "Kayıt tamamlanamadı. Lütfen girişlerinizi kontrol ediniz.");
         console.error("ERROR: " + error);
-        
+
     });
 }
 
@@ -20,18 +30,17 @@ function generateID(text) {
     return text;
 }
 
-function GetTimeStamp(dt)
-{
-    
-    var timestmp =dt.getTime();
-    
+function GetTimeStamp(dt) {
+
+    var timestmp = dt.getTime();
+
     return timestmp;
 }
 
 
-function saveContactInfo(){
+function saveContactInfo() {
 
-    if(validateFields()){
+    if (validateFields()) {
 
         var txtName = $("#txtName").val();
         var txtCompany = $("#txtCompany").val();
@@ -40,33 +49,33 @@ function saveContactInfo(){
         var txtMessage = $("#txtMessage").val();
 
         var d = new Date();
-        var dd=d.getDate();
-        var mm=(d.getMonth()+1);
-        if(dd<10){
-            dd='0'+dd;
-        } 
-        if(mm<10){
-            mm='0'+mm;
+        var dd = d.getDate();
+        var mm = (d.getMonth() + 1);
+        if (dd < 10) {
+            dd = '0' + dd;
         }
-        var tarih=dd+"/"+mm+"/"+d.getFullYear();
+        if (mm < 10) {
+            mm = '0' + mm;
+        }
+        var tarih = dd + "/" + mm + "/" + d.getFullYear();
 
-        var veri={
-            "Name":txtName,
-            "Company":txtCompany,
-            "Phone":txtPhone,
-            "Email":txtEmail,
-            "Message":txtMessage,
-            "Date":tarih
+        var veri = {
+            "Name": txtName,
+            "Company": txtCompany,
+            "Phone": txtPhone,
+            "Email": txtEmail,
+            "Message": txtMessage,
+            "Date": tarih
         }
 
         var id = generateID(txtName);
 
-        kaydetVeritabani("kontakte",id,veri);
-        
+        kaydetVeritabani("kontakte", id, veri);
+
 
     }
 
-    
+
 }
 
 function validateFields() {
