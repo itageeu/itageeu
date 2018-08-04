@@ -24,9 +24,9 @@ function kaydetVeritabani(tablo, id, veri) {
 
 
     firebase.database().ref(tablo + '/' + id).set(veri).then(function (deneme) {
-        msgInfo("Başarılı", "Kayıt tamamlandı. İşleminize devam edebilirsiniz..");
+        msgInfo("Successful", "Your message is received. Our team will contact you as soon as possible. Thank you.");
     }).catch(function (error) {
-        msgInfo("Uyarı", "Kayıt tamamlanamadı. Lütfen girişlerinizi kontrol ediniz.");
+        msgInfo("Warning", "Message not received.");
         console.error("ERROR: " + error);
 
     });
