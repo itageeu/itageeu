@@ -22,8 +22,8 @@ function generateID(text) {
 
 function GetTimeStamp(dt)
 {
-    var newdate =$.datepicker.formatDate('dd/MM/yy', dt);
-    var timestmp =Date.parse(newdate);
+    
+    var timestmp =dt.GetTimeStamp(dt);
     
     return timestmp;
 }
