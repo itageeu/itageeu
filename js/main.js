@@ -23,7 +23,7 @@ function generateID(text) {
 function GetTimeStamp(dt)
 {
     
-    var timestmp =dt.GetTimeStamp(dt);
+    var timestmp =dt.getTime();
     
     return timestmp;
 }
