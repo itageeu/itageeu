@@ -20,6 +20,20 @@ function generateID(text) {
     return text;
 }
 
+function GetTimeStamp(dt)
+{
+    var newdate =$.datepicker.formatDate('dd/MM/yy', dt);
+    var timestmp =Date.parse(newdate);
+    
+    return timestmp;
+}
+
+
+function saveContactInfo(){
+
+    
+}
+
 function msgInfo(title, msg) {
 
 
@@ -56,3 +70,4 @@ function msgWarning(title, msg) {
     $("#modalTitle").addClass("text-danger");
     $("#modalAlert").modal({ backdrop: 'true', show: 'show' });
 }
+
